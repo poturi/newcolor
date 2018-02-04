@@ -1,0 +1,4 @@
+class UsersInfo < ApplicationRecord
+    
+
+end

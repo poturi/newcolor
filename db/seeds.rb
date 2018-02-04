@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#   coding: utf-8
+#   以下のように記述することでテストデータを作成できるよ
+require "csv"
+
+CSV.foreach('db/sample/seed.csv') do |row|
+UsersInfo.create(:id => row[0], :password => row[1], :user_name => row[2], :job_id =>row[3],
+:position_id => row[4], :age => row[5], :is_deleted => row[6], :address => row[7], :version => row[8])
+end
