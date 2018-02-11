@@ -8,7 +8,7 @@
 #   coding: utf-8
 require "csv"
 
-CSV.foreach('db/sample/seed.csv') do |row|
+CSV.foreach('db/sample/users_infos.csv') do |row|
 UsersInfo.create(:id => row[0], :password => row[1], :user_name => row[2], :job_id =>row[3],
 :position_id => row[4], :age => row[5], :is_deleted => row[6], :address => row[7], :version => row[8])
 end
