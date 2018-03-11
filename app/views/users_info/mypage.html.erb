@@ -1,9 +1,9 @@
 <h1>UsersInfo#mypage</h1>
 <p>仮マイページ、仮の各画面入り口</p>
 <table>
-<% @userinfo.each do |user| %>
   <tr>
-    <td><%= user.user_name %></td>
-    </tr>
-<% end %>
+    <th>name</th>
+    <td><%= @userInfo.user_name %></td>
+    <td><%= @userInfo.address %></td>
+  </tr>
 </table>

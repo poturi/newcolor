@@ -3,7 +3,7 @@ class UsersInfoController < ApplicationController
   end
   
   def mypage
-    @userinfo = UsersInfo.all
+    @userInfo = UsersInfo.find(params[:id])
   end
   
   def dummytop

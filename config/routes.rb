@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/mypage', to: 'users_info#mypage'
+  get '/mypage/:id', to: 'users_info#mypage'
 
   get '/new', to: 'users_info#new'
 
@@ -8,6 +8,5 @@ Rails.application.routes.draw do
   
   #resours
   resources :userinfo
-  
   
 end
