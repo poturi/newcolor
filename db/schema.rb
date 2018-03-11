@@ -10,19 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180125140748) do
-
-  create_table "users_infos", force: :cascade do |t|
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "password"
-    t.text     "user_name"
-    t.string   "job_id"
-    t.string   "position_id"
-    t.decimal  "age"
-    t.decimal  "is_deleted"
-    t.string   "address"
-    t.decimal  "version"
-  end
+ActiveRecord::Schema.define(version: 20180307153254) do
 
 end
