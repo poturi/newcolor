@@ -9,5 +9,4 @@ Rails.application.routes.draw do
   #resours
   resources :userinfo
   
-  
 end
