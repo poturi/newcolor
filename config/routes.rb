@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/new', to: 'users_info#new'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'users_info#mypage'
+  root 'users_info#dummytop'
   
   #resours
   resources :userinfo
