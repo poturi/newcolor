@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20180307153254) do
     t.text     "url"
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
-    
     t.index ["job_m_id"], name: "index_companies_infos_on_job_m_id"
     t.index ["users_info_id"], name: "index_companies_infos_on_users_info_id"
   end
@@ -49,7 +48,6 @@ ActiveRecord::Schema.define(version: 20180307153254) do
     t.integer  "is_deleted",        limit: 1, default: 0, null: false
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
-
     t.index ["companies_info_id"], name: "index_ratings_on_companies_info_id"
     t.index ["users_info_id"], name: "index_ratings_on_users_info_id"
   end
@@ -65,7 +63,6 @@ ActiveRecord::Schema.define(version: 20180307153254) do
     t.string   "version",       limit: 5
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
-
     t.index ["job_m_id"], name: "index_users_infos_on_job_m_id"
     t.index ["position_m_id"], name: "index_users_infos_on_position_m_id"
   end
