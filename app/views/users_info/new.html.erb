@@ -9,17 +9,14 @@
       <th>氏名</th>
       <td><%= f.text_field :user_name %></td>
     </tr>
-    
     <tr>
       <th>メールアドレス</th>
       <td><%= f.email_field :address %></td>
     </tr>
-    
     <tr>
       <th>年代</th>
       <td><%= f.select :age, UsersInfo::AGES %></td>
     </tr>
-    
     <tr>
       <th>職種</th>
       <td><%= f.select :job_m_id, @jobs %></td>
@@ -28,16 +25,13 @@
       <th>階級</th>
       <td><%= f.select :position_m_id, @positions %></td>
     </tr>
-    
     <tr>
       <th>パスワード</th>
       <td><%= f.password_field :password %></td>
     </tr>
-    
     <tr>
       <th></th>
       <td><%= f.submit "登録する", class: "btn btn-primary" %></td>
     </tr>
-    
   <% end %>
 </table>
