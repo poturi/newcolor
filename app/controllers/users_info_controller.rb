@@ -21,7 +21,7 @@ class UsersInfoController < ApplicationController
   end
   
   private
-    
+  
     def job
        @jobs = JobM.where("is_deleted = 0").pluck(:job_name, :id)
     end
@@ -34,4 +34,5 @@ class UsersInfoController < ApplicationController
       params.require(:users_info).permit(:user_name, :address, :age, :job_m, :job_m_id,
             :position_m_id, :password)
     end
+    
 end

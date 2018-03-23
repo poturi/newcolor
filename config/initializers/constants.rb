@@ -9,4 +9,6 @@ module Constants
   FORTIES = '40代'
   FIFTIES = '50代'
   SIXTIES = '60代'
+  
+  
 end
