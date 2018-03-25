@@ -8,7 +8,7 @@ class CreateUsersInfos < ActiveRecord::Migration[5.0]
       t.integer :age, :limit => 1, null: false
       t.integer :is_deleted, :limit => 1, null: false, :default => 0
       t.text :address, :limit => 320, null: false
-      t.string :version, :limit => 5
+      t.string :version, :limit => 5, :default => 1
 
       t.timestamps
     end
