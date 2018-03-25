@@ -2,6 +2,7 @@ class UsersInfo < ApplicationRecord
   belongs_to :job_m
   belongs_to :position_m
   
-  AGES = [[NOT_SET, 0], [TEENS, 1], [TWENTIES, 2], [THIRTIES, 3], [FORTIES, 4], [FIFTIES, 5], [SIXTIES, 6]]
+  AGES = [[Constants::NOT_SET, 0], [Constants::TEENS, 1], [Constants::TWENTIES, 2],
+      [Constants::THIRTIES, 3], [Constants::FORTIES, 4], [Constants::FIFTIES, 5], [Constants::SIXTIES, 6]]
   
 end

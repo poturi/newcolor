@@ -53,16 +53,16 @@ ActiveRecord::Schema.define(version: 20180307153254) do
   end
 
   create_table "users_infos", force: :cascade do |t|
-    t.string   "password",      limit: 60,              null: false
-    t.string   "user_name",     limit: 20,              null: false
+    t.string   "password",      limit: 60,                null: false
+    t.string   "user_name",     limit: 20,                null: false
     t.integer  "job_m_id"
     t.integer  "position_m_id"
-    t.integer  "age",           limit: 1,               null: false
-    t.integer  "is_deleted",    limit: 1,   default: 0, null: false
-    t.text     "address",       limit: 320,             null: false
-    t.string   "version",       limit: 5
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.integer  "age",           limit: 1,                 null: false
+    t.integer  "is_deleted",    limit: 1,   default: 0,   null: false
+    t.text     "address",       limit: 320,               null: false
+    t.string   "version",       limit: 5,   default: "1"
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.index ["job_m_id"], name: "index_users_infos_on_job_m_id"
     t.index ["position_m_id"], name: "index_users_infos_on_position_m_id"
   end
