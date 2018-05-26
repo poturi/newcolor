@@ -35,4 +35,7 @@ class UsersInfoController < ApplicationController
             :position_m_id, :password)
     end
     
+    def abc
+    end
+    
 end
