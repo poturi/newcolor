@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/mypage/:id', to: 'users_info#mypage'
   get '/new', to: 'users_info#new'
   post '/create', to: 'users_info#create'
+  get '/abc', to: 'users_info#abc'
   
   #resours
   resources :userinfo
