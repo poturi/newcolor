@@ -1,10 +1,10 @@
-<h1>USERS_INFO#ABC</h1>
+<h1>検索トップをつくりたいんじゃぁ｡｡｡</h1>
 <p>会社名を入力してください</p>
 
 <div>
   <!--リダイレクトで接続出来るようにしたい-->
   <!--要素をインスタンス変数化することによってコードの隠匿を図る-->
-  <%= form_tag(contoroller: "users_info" ,action: "result", method: "post") do%>
+  <%= form_tag(contoroller: "users_info" ,action: "companysearch", method: "post") do%>
   <table>
     <tr>
       <td><%= text_field_tag("find") %></td>
@@ -12,4 +12,19 @@
     </tr>
     <% end %>
   </table>
+  <% if @company.present? %>
+      <table>
+        <tr>
+            <th>番号</th>
+            <th>会社名</th>
+        </tr>
+        <% @company.each do |obj| %>
+        <tr>        
+            <td><%= obj.id %></td>
+            <td><%= obj.company_name %></td>
+        </tr>
+        <% end %>
+    </table>  
+  <% end %>
+
 </div>

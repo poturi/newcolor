@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   post '/create', to: 'users_info#create'
   get '/companysearch', to: 'users_info#companysearch'
   post '/companysearch', to: 'users_info#companysearch'
-  get '/result', to: 'users_info#result'
-  post '/result', to: 'users_info#result'
   get 'companies_infos/find'
   post 'companies_infos/find'
   get 'companies_infos/:id', to: 'users_info#companysearch'
