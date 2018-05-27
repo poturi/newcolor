@@ -20,7 +20,7 @@ class UsersInfoController < ApplicationController
     @userInfo.save
   end
   
-  def abc
+  def companysearch
     
   end
   
