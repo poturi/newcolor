@@ -1,3 +1,43 @@
 // Place all the styles related to the users_info controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.main {
+  display: block;
+  position: relative;
+  margin-bottom: 200px;
+  z-index: 2;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0;
+  width: 100%;
+
+  /* フッタの高さ */
+  height: 60px;
+  background: #fff;
+  color: #000;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+table tr th{
+  background: #909090;
+  color: #f6f6f6;
+  font-size: 12pt;
+  font-weight:bold;
+}
+
+table tr td{
+  background: #909090;
+  color: #f6f6f6;
+  font-size: 12pt;
+}

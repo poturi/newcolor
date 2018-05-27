@@ -5,8 +5,14 @@ Rails.application.routes.draw do
   get '/mypage/:id', to: 'users_info#mypage'
   get '/new', to: 'users_info#new'
   post '/create', to: 'users_info#create'
-  
-  #resours
+  get '/abc', to: 'users_info#abc'
+  post '/abc', to: 'users_info#abc'
+  get '/result', to: 'users_info#result'
+  post '/result', to: 'users_info#result'
+  get 'companies_infos/find'
+  post 'companies_infos/find'
+  get 'companies_infos/:id', to: 'users_info#abc'
+  #resourse
   resources :userinfo
   
 end

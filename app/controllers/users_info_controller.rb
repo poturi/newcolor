@@ -20,6 +20,24 @@ class UsersInfoController < ApplicationController
     @userInfo.save
   end
   
+  def abc
+    
+  end
+  
+ 
+  
+  # 会社名の検索結果表示用ページ
+  def result
+    # post通信が行われた時、会社名検索を行い、結果を配列に格納して送る
+    if request.post? then
+      @company = CompaniesInfo.where "company_name like ?",'%' + params[:find] + '%'
+    # 仮で何も入力されなければ全件表示されるようにしておく
+    else
+      @company = CompaniesInfo.all
+    end
+    
+  end
+  
   private
   
     def job

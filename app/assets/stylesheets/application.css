@@ -14,8 +14,31 @@
  *= require_self
  */
  
- 
-#footer {
+ html {
+  position: relative;
+  min-height: 100%;
+}
+
+table {
+    position: relative;
+    min-height: 100%;
+    /* フッタと同じ高さに設定 */
+  margin-bottom: 60px;
+
+  /* 一番下までスクロールした時の余白 */
+  padding-bottom: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  /* フッタと同じ高さに設定 */
+  margin-bottom: 60px;
+
+  /* 一番下までスクロールした時の余白 */
+  padding-bottom: 0;
+}
+footer {
     position: fixed;
     bottom: 0;
     width: 100%;

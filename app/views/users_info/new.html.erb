@@ -1,8 +1,8 @@
-
+<%= stylesheet_link_tag "application"  %>
 <h1>会員登録</h1>
 <p>新規会員登録を行う画面です。<br>
 下記項目を入力し、登録ボタンを押して登録してください。</p>
-
+<body>
 <table>
   <%= form_for(@userInfo, url:{controller: 'users_info', action: 'create'}) do |f| %>
     <tr>
@@ -35,3 +35,4 @@
     </tr>
   <% end %>
 </table>
+</body>

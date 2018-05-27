@@ -1,0 +1,15 @@
+<h1>USERS_INFO#ABC</h1>
+<p>会社名を入力してください</p>
+
+<div>
+  <!--リダイレクトで接続出来るようにしたい-->
+  <!--要素をインスタンス変数化することによってコードの隠匿を図る-->
+  <%= form_tag(contoroller: "users_info" ,action: "result", method: "post") do%>
+  <table>
+    <tr>
+      <td><%= text_field_tag("find") %></td>
+      <td><%= submit_tag("Click") %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
