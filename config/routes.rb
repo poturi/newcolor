@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get  '/login', to: 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destro'
+  get '/abc', to: 'users_info#abc'
   
   #resours
   resources :userinfo
