@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get '/mypage/:id', to: 'users_info#mypage'
   get '/new', to: 'users_info#new'
   post '/create', to: 'users_info#create'
+  get  '/login', to: 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destro'
   
   #resours
   resources :userinfo
