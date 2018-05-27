@@ -1,0 +1,9 @@
+ja:
+  attributes:
+    user_name: 氏名
+    age: 年代
+    job_m_id: 職種
+    position_m_id: 階級
+    address: メールアドレス
+    password: パスワード
+    

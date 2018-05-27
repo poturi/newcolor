@@ -3,6 +3,16 @@
 <p>新規会員登録を行う画面です。<br>
 下記項目を入力し、登録ボタンを押して登録してください。</p>
 
+<% if @userInfo.errors.any? %>
+  <div id="error_explanation">
+    <ul style='color:red'>
+    <% @userInfo.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <table>
   <%= form_for(@userInfo, url:{controller: 'users_info', action: 'create'}) do |f| %>
     <tr>

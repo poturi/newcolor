@@ -1,7 +1,7 @@
 class UsersInfoController < ApplicationController
   
-  before_action :job, only: [:mypage, :new]
-  before_action :position, only: [:mypage, :new]
+  before_action :job, only: [:mypage, :new, :create]
+  before_action :position, only: [:mypage, :new, :create]
   
   def new
     @userInfo = UsersInfo.new
@@ -17,7 +17,12 @@ class UsersInfoController < ApplicationController
   
   def create
     @userInfo = UsersInfo.new(user_info_params)
-    @userInfo.save
+    if @userInfo.save
+      @msg = '登録が完了しました。'
+      render 'complete'
+    else
+      render 'new'
+    end
   end
   
   private
@@ -31,7 +36,7 @@ class UsersInfoController < ApplicationController
     end
     
     def user_info_params
-      params.require(:users_info).permit(:user_name, :address, :age, :job_m, :job_m_id,
+      params.require(:users_info).permit(:user_name, :address, :age, :job_m_id,
             :position_m_id, :password)
     end
     

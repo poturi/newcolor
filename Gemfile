@@ -22,6 +22,9 @@ gem 'turbolinks'
 gem 'jbuilder', '2.7.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '0.4.2', group: :doc
+# エラーメッセージとかで表示するカラム名を英語から他言語に変換してくれる
+# config配下のapplication.rbと、locales配下のja.ymlで利用
+gem 'rails-i18n'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
