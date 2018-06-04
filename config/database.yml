@@ -17,9 +17,9 @@ development:
   encoding: utf8
   database: test_development
   pool: 5
-  username: test
-  password: test
-  host: 121.111.133.153
+  username: <%= ENV['RAILS_DATABASE_USERNAME'] %>
+  password: <%= ENV['RAILS_DATABASE_PASSWORD'] %>
+  host: <%= ENV['RAILS_DATABASE_HOST'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
