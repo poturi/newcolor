@@ -22,6 +22,13 @@ class UsersInfoController < ApplicationController
   
   # 会社名の検索トップページ（予定）
   def companysearch
+    
+    companys = CompaniesInfo.all
+    @companys_for_options = Hash.new
+    companys.each do |company|
+      @companys_for_options.store(company.company_name, company.id)
+    end
+    
     # post通信が行われた時、会社名検索を行い、結果を配列に格納して送る
     if request.post? then
       @company = CompaniesInfo.where "company_name like ?",'%' + params[:find] + '%'

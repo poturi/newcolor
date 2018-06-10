@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'company/info'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'users_info#dummytop'
   
@@ -10,6 +12,9 @@ Rails.application.routes.draw do
   get 'companies_infos/find'
   post 'companies_infos/find'
   get 'companies_infos/:id', to: 'users_info#companysearch'
+
+  get 'company/companyinfo'
+
   #resourse
   resources :userinfo
   

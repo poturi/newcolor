@@ -8,10 +8,12 @@
   <table>
     <tr>
       <td><%= text_field_tag("find") %></td>
+      <%= select_tag :id, options_for_select(@companys_for_options) %>
       <td><%= submit_tag("Click") %></td>
     </tr>
     <% end %>
   </table>
+  <!--companyがNULLならテーブル-->
   <% if @company.present? %>
       <table>
         <tr>
@@ -22,6 +24,7 @@
         <tr>        
             <td><%= obj.id %></td>
             <td><%= obj.company_name %></td>
+            <td><%= link_to obj.company_name , controller: "company", action: "info", id: obj.id%></td>
         </tr>
         <% end %>
     </table>  
