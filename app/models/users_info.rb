@@ -4,8 +4,6 @@ class UsersInfo < ApplicationRecord
   
   has_secure_password
   
-  
-  
   #rails generate migration add_password_digest_to_hoges password_digest:string
   
   AGES = [[Constants::NOT_SET, 0], [Constants::TEENS, 1], [Constants::TWENTIES, 2],

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'users_info#dummytop'
   
   get '/mypage/:id', to: 'users_info#mypage'
+  post '/mypage', to: 'users_info#mypage'
   get '/new', to: 'users_info#new'
   post '/create', to: 'users_info#create'
   get  '/login', to: 'sessions#new'

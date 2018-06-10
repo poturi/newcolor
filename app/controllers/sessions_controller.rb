@@ -7,14 +7,17 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
     #if user && user.(params[:session][:password])
       # ユーザーログイン後にユーザー情報のページにリダイレクトする
-      render 'success'
+      
+      #redirect_to controller:users_info, action:mypage, params:{'id': user.id}
+      render'afterLogin'
     else
       # エラーメッセージを作成する
       render 'new'
     end
-      render 'new'
+
    end
 
    def destroy
    end
+   
 end

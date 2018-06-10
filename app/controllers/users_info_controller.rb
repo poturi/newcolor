@@ -17,7 +17,12 @@ class UsersInfoController < ApplicationController
   
   def create
     @userInfo = UsersInfo.new(user_info_params)
-    @userInfo.save
+    
+    if (@userInfo.save)
+      render html: "new"
+    else
+      render html: "dummytop"
+    end
   end
   
   private
@@ -31,11 +36,8 @@ class UsersInfoController < ApplicationController
     end
     
     def user_info_params
-      params.require(:users_info).permit(:user_name, :address, :age, :job_m, :job_m_id,
-            :position_m_id, :password)
+      params.require(:users_info).permit( :password, :user_name, :address, :age, :job_m_id,
+            :position_m_id, :password_confirmation)
     end
-    
-    def abc
-    end
-    
+  
 end
