@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180307153254) do
+ActiveRecord::Schema.define(version: 20180603023351) do
 
   create_table "companies_infos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "company_name",  limit: 200,               null: false
@@ -52,34 +52,20 @@ ActiveRecord::Schema.define(version: 20180307153254) do
     t.index ["users_info_id"], name: "index_ratings_on_users_info_id", using: :btree
   end
 
-  create_table "users_infos", force: :cascade do |t|
-    t.string   "password",      limit: 60,              null: false
-    t.string   "user_name",     limit: 20,              null: false
-    t.integer  "job_m_id"
-    t.integer  "position_m_id"
-    t.integer  "age",           limit: 1,               null: false
-    t.integer  "is_deleted",    limit: 1,   default: 0, null: false
-    t.text     "address",       limit: 320,             null: false
-    t.string   "version",       limit: 5
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
-    t.index ["job_m_id"], name: "index_users_infos_on_job_m_id"
-    t.index ["position_m_id"], name: "index_users_infos_on_position_m_id"
-
   create_table "users_infos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "password",      limit: 60,                  null: false
-    t.string   "user_name",     limit: 20,                  null: false
+    t.string   "password",        limit: 60,                  null: false
+    t.string   "user_name",       limit: 20,                  null: false
     t.integer  "job_m_id"
     t.integer  "position_m_id"
-    t.integer  "age",           limit: 1,                   null: false
-    t.integer  "is_deleted",    limit: 1,     default: 0,   null: false
-    t.text     "address",       limit: 65535,               null: false
-    t.string   "version",       limit: 5,     default: "1"
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
+    t.integer  "age",             limit: 1,                   null: false
+    t.integer  "is_deleted",      limit: 1,     default: 0,   null: false
+    t.text     "address",         limit: 65535,               null: false
+    t.string   "version",         limit: 5,     default: "1"
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
+    t.string   "password_digest"
     t.index ["job_m_id"], name: "index_users_infos_on_job_m_id", using: :btree
     t.index ["position_m_id"], name: "index_users_infos_on_position_m_id", using: :btree
-
   end
 
   add_foreign_key "companies_infos", "job_ms"
