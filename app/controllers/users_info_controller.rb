@@ -24,8 +24,6 @@ class UsersInfoController < ApplicationController
     
   end
   
- 
-  
   # 会社名の検索結果表示用ページ
   def result
     # post通信が行われた時、会社名検索を行い、結果を配列に格納して送る

@@ -1,25 +1,27 @@
 <h1>USER_INFO#result</h1>
 
-<div>
+<% if @company.errors.any?%>
+<p>何か間違えてるよ</p>
+<% else %>
+<table>
     <%= form_tag(contoroller: "users_info",action: "result",method:"post") do %>
-    <table>
-        <tr>
-            <td><%= text_field_tag("find") %></td>
-            <td><%= submit_tag("Click") %></td>
-        </tr>
-        <% end %>
-    </table>
+    <tr>
+        <td><%= text_field_tag("find") %></td>
+        <td><%= submit_tag("Click") %></td>
+    </tr>
+    <% end %>
+</table>
     
-    <table>
-        <tr>
-            <th>番号</th>
-            <th>会社名</th>
-        </tr>
-        <% @company.each do |obj| %>
-        <tr>        
-            <td><%= obj.id %></td>
-            <td><%= obj.company_name %></td>
-        </tr>
-        <% end %>
-    </table>
-</div>
+<table>
+    <tr>    
+        <th>番号</th>
+        <th>会社名</th>
+    </tr>
+    <% @company.each do |obj| %>
+    <tr>        
+        <td><%= obj.id %></td>
+        <td><%= obj.company_name %></td>
+    </tr>
+    <% end %>
+</table>
+<% end %>
