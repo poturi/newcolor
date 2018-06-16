@@ -10,8 +10,8 @@
         <td><%= @companyInfo.company_name %></td>
     </tr>
     <tr>
-        <th>ジョブID</th>
-        <td><%= @companyInfo.job_m_id %></td>
+        <th>ジョブ</th>
+        <td><%= @jobInfo.job_name %></td>
     </tr>
     <tr>
         <th>URL</th>
@@ -19,3 +19,43 @@
     </tr>
     
 </table>
+<% if @ratingInfo.present? %>
+<table>
+    <tr>
+        <th>評価だどん</th>
+        <th>評価者</th>
+        <th>おかね</th>
+        <th>スキル</th>
+        <th>しごと</th>
+        <th>年齢</th>
+    </tr>
+    
+        <% @ratingInfo.each do |obj| %>
+        <tr>        
+            <td>
+                <%= obj.companies_info_id %>
+            </td>
+            <td>
+                <%= obj.users_info_id %>
+            </td>
+                
+            <td>
+                <%= obj.money%>
+            </td>
+            
+            <td>
+                <%= obj.skill%>
+            </td>
+            
+            <td>
+                <%= obj.work%>
+            </td>
+            <td>
+                <%= obj.age%>
+            </td>
+        </tr>
+        <% end %>
+</table>
+<% end %>
+<%=link_to '戻る', controller: "users_info", action: "companysearch" %>
+
