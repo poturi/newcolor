@@ -58,9 +58,11 @@
 </table>
 <% end %>
 
-
-  <div><%= text_area :content, class: "hogehoge", size: "100x50" %></div>
-  
+<h2>評価を入力してみたよ</h2>
+<%= form_tag(contoroller: "company" ,action: "postComment", method: "post") do%>
+  <div><%= text_area :content, size: "100x50" %></div>
+  <div><%= submit_tag("Click") %></div>
+<% end %>  
 
 
 <%=link_to '戻る', controller: "users_info", action: "companysearch" %>

@@ -1,7 +1,6 @@
 class CompanyController < ApplicationController
   def info
     
-        
     @companyInfo = CompaniesInfo.find(params[:id])
     
     @jobInfo = JobM.find(@companyInfo.job_m_id)
@@ -12,5 +11,10 @@ class CompanyController < ApplicationController
       @companyInfo.url = ""
     end
 
+  end
+  
+  def postComment
+    redirect_to action: 'info', id:1
+    #render :info
   end
 end

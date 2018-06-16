@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   post 'companies_infos/find'
   get 'companies_infos/:id', to: 'users_info#companysearch'
 
-  get 'company/companyinfo'
+  post 'company/info', to: 'company#postComment'
 
   #resourse
   resources :userinfo
