@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
       render'afterLogin'
     else
       # エラーメッセージを作成する
+      flash.now[:notice] = "ログインID・パスワードが違います。"
       render 'new'
     end
 
